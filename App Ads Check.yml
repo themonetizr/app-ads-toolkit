@@ -1,0 +1,20 @@
+name: app-ads nightly check
+
+on:
+  schedule:
+    - cron: '17 2 * * *'  # nightly at 02:17 UTC
+  workflow_dispatch: {}  # allows manual run from Actions tab
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run checker
+        run: |
+          python3 tools/app_ads_checker.py --publishers data/publishers.csv --master data/master_app_ads.txt --out out
+      - name: Upload report artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-ads-report
+          path: out/**
