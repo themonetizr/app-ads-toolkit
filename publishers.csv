@@ -1,3 +1,5 @@
 publisher_name,domain,app_ads_path,notes
-Studio A,studio-a.example,/app-ads.txt,Primary site
-Studio B,games.studio-b.example,/app-ads.txt,Subdomain host
+Monetizr,https://monetizr.com,/app-ads.txt,Primary site
+TapNation,https://tap-nation.io,/app-ads.txt,Primary site
+EzGames,https://ezgames.cc,/app-ads.txt,Primary site
+
