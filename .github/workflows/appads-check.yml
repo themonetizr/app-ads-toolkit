@@ -1,8 +1,6 @@
 name: app-ads nightly check
 
 on:
-  schedule:
-    - cron: '17 2 * * *'  # nightly at 02:17 UTC
   workflow_dispatch: {}  # allows manual run from Actions tab
 
 jobs:
