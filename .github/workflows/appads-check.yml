@@ -10,6 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Merge partner files into master (dedupe + sort + validate)
+        run: |
+          python3 tools/app_ads_update.py --partners_dir data/partners --master data/master_app_ads.txt --out data/master_app_ads.txt --report out
       - name: Run checker
         run: |
           python3 tools/app_ads_checker.py --publishers data/publishers.csv --master data/master_app_ads.txt --out out
