@@ -29,13 +29,18 @@ def load_master(path):
     return lines
 
 def fetch_app_ads_txt(host, path):
-    url_http = f"http://{host}{path}"
+    import urllib.request
+
+    ua = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36"
     url_https = f"https://{host}{path}"
+    url_http = f"http://{host}{path}"
     last_err = None
+
     for url in (url_https, url_http):
         try:
-            with urllib.request.urlopen(url, timeout=20) as resp:
-                content = resp.read().decode('utf-8', errors='replace')
+            req = urllib.request.Request(url, headers={"User-Agent": ua})
+            with urllib.request.urlopen(req, timeout=20) as resp:
+                content = resp.read().decode("utf-8", errors="replace")
                 return url, content
         except Exception as e:
             last_err = str(e)
