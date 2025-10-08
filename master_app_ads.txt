@@ -1,0 +1,9 @@
+# Monetizr — app-ads.txt master list (SOURCE OF TRUTH)
+# Format: <ad system domain>, <publisher account id>, <relationship>, <cert auth id - optional>
+# Example:
+# exampledsp.com, 12345, DIRECT, f08c47fec0942fa0
+# NOTE: Keep this file alphabetized by ad system domain and deduplicated.
+# ----- BEGIN AUTHORIZED LINES -----
+exampledsp.com, pub-12345, DIRECT, f08c47fec0942fa0
+sampleexchange.org, 98765, RESELLER, a9f1c3d6721b4eaa
+# ----- END AUTHORIZED LINES -----
