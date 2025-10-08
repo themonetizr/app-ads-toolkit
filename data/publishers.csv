@@ -1,5 +1,6 @@
 publisher_name,domain,app_ads_path,notes
-Monetizr,https://monetizr.com,/app-ads.txt,Primary site
-TapNation,https://tap-nation.io,/app-ads.txt,Primary site
-EzGames,https://ezgames.cc,/app-ads.txt,Primary site
+Monetizr,monetizr.com,/app-ads.txt,Primary site
+TapNation,tap-nation.io,/app-ads.txt,Primary site
+EzGames,ezgames.cc,/app-ads.txt,Primary site
+
 
