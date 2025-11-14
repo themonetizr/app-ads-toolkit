@@ -3,7 +3,7 @@
 	"domain": "monetizr.com",
 	"contact_email": "support@monetizr.com",
 	"last_updated": "2025-11-14T12:00:00Z",
-	"version":"1.2",
+	"version":"1.0",
 	"contact_address":"3343 Peachtree Rd NE Ste. 145-677, Atlanta, GA 30326",
 	"contact_email":"info@themonetizr.com",
 	"identifiers":[
@@ -66,5 +66,5 @@
 			"seller_id":"443704b8-0bd6-417f-b3a8-091116db095c",
 			"seller_type":"PUBLISHER"
 		}
-	],
+	]
 }
