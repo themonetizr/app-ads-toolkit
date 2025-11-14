@@ -9,6 +9,15 @@ This mini-toolkit helps you (1) keep every publisher's `app-ads.txt` in sync wit
 - `tools/app_ads_merge.py` — merges a missing-lines patch into a local `app-ads.txt` file.
 - `.github/workflows/appads-check.yml` — optional GitHub Action to run nightly and attach the report.
 
+## Quick start (web)
+1. Adding lines to app-ads.txt
+   - Add partner file to `data/partners/` named afer the partner in app-ads.txt format.
+   - Go to Actions tab and run `appads-check.yml` on the main branch.
+   - Set of reports will be produced
+      -  `update_report.json` explains manipulations done on the `data/master_app_ads.txt`
+      -  `report.json` reviews partner app-ads.txt files and compares with our document
+      -  `[partner]_cc_missing.txt` is specific file to send to publishers for app-ads.txt line update needed. 
+
 ## Quick start (local)
 ```bash
 cd app-ads-toolkit
