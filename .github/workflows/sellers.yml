@@ -1,0 +1,33 @@
+name: sellers generate & check
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  sellers:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate sellers.json
+        run: |
+          python3 tools/sellers_generate.py \
+            --system_domain monetizr.com \
+            --master data/master_app_ads.txt \
+            --publishers data/publishers.csv \
+            --partners_dir data/partners \
+            --config data/sellers_config.json \
+            --out sellers.json
+
+      - name: Validate sellers.json
+        run: |
+          python3 tools/sellers_check.py \
+            --sellers sellers.json \
+            --master data/master_app_ads.txt \
+            --system_domain monetizr.com
+
+      - name: Upload sellers.json
+        uses: actions/upload-artifact@v4
+        with:
+          name: sellers-json
+          path: sellers.json
