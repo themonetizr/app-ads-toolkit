@@ -2,7 +2,7 @@
 	"name": "Monetization Solutions, Inc.",
 	"domain": "monetizr.com",
 	"contact_email": "support@monetizr.com",
-	"last_updated": "2025-11-14T12:00:00Z",
+	"last_updated": "2026-09-20T12:00:00Z",
 	"version":"1.0",
 	"contact_address":"3343 Peachtree Rd NE Ste. 145-677, Atlanta, GA 30326",
 	"identifiers":[
@@ -24,6 +24,13 @@
 			"name":"E-Planning",
 			"seller_id":"63aec118b10654ac",
 			"seller_type":"INTERMEDIARY"
+		},
+		{
+			"comment":"Wooga",
+			"domain":"wooga.com",
+			"name":"Wooga",
+			"seller_id":"14ba48c2-e7b4-4c9f-ae97-564d73db9ae8",
+			"seller_type":"PUBLISHER"
 		},
 		{
 			"comment":"Monetizr SDK on Voodoo",
